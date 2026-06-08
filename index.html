@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gráfica Criativa</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f8f9fa;
+color:#333;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:#fff;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
+z-index:1000;
+}
+
+.navbar{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#ff4d4d;
+}
+
+.menu a{
+text-decoration:none;
+color:#333;
+margin-left:20px;
+font-weight:500;
+transition:.3s;
+}
+
+.menu a:hover{
+color:#ff4d4d;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero-content h1{
+font-size:60px;
+margin-bottom:20px;
+animation:fadeDown 1s ease;
+}
+
+.hero-content p{
+font-size:22px;
+margin-bottom:30px;
+animation:fadeUp 1s ease;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#ff4d4d;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+background:#e63939;
+transform:translateY(-3px);
+}
+
+section{
+padding:100px 20px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+.titulo{
+text-align:center;
+margin-bottom:50px;
+}
+
+.titulo h2{
+font-size:38px;
+color:#222;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+color:#ff4d4d;
+margin-bottom:10px;
+}
+
+.galeria{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.galeria img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+transition:.4s;
+}
+
+.galeria img:hover{
+transform:scale(1.05);
+}
+
+.contato{
+background:#222;
+color:white;
+text-align:center;
+}
+
+.contato h2{
+margin-bottom:15px;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.whatsapp{
+position:fixed;
+right:25px;
+bottom:25px;
+width:65px;
+height:65px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:35px;
+color:white;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+z-index:999;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+}
+
+@keyframes fadeDown{
+from{
+opacity:0;
+transform:translateY(-50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.reveal{
+opacity:0;
+transform:translateY(50px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:40px;
+}
+
+.hero-content p{
+font-size:18px;
+}
+
+.menu{
+display:none;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<div class="navbar">
+<div class="logo">GV-GRAFICA Personalizados</div>
+
+<nav class="menu">
+<a href="#inicio">Início</a>
+<a href="#produtos">Produtos</a>
+<a href="#galeria">Galeria</a>
+<a href="#contato">Contato</a>
+</nav>
+</div>
+</header>
+
+<section class="hero" id="inicio">
+<div class="hero-content">
+<h1>Transformando Ideias em Impressões</h1>
+<p>Polaroids, Fotos, Topos de Bolo, Ímãs e Personalizados</p>
+
+<a href="#contato" class="btn">
+Solicitar Orçamento
+</a>
+</div>
+</section>
+
+<section id="produtos" class="reveal">
+<div class="container">
+
+<div class="titulo">
+<h2>Nossos Produtos</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>Polaroid</h3>
+<p>Fotos personalizadas em estilo retrô para lembranças especiais.</p>
+</div>
+
+<div class="card">
+<h3>Fotos 10x15</h3>
+<p>Impressão em papel fotográfico glossy de alta qualidade.</p>
+</div>
+
+<div class="card">
+<h3>Topo de Bolo</h3>
+<p>Modelos simples e 3D totalmente personalizados.</p>
+</div>
+
+<div class="card">
+<h3>Ímãs de Geladeira</h3>
+<p>Perfeitos para lembranças de festas e eventos.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="galeria" class="reveal">
+
+<div class="container">
+
+<div class="titulo">
+<h2>Galeria</h2>
+</div>
+
+<div class="galeria">
+
+<img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800" alt="">
+<img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800" alt="">
+<img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800" alt="">
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800" alt="">
+<img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=800" alt="">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800" alt="">
+
+</div>
+
+</div>
+</section>
+
+<section id="contato" class="contato reveal">
+
+<div class="container">
+
+<h2>Faça seu orçamento agora</h2>
+
+<p>
+Entre em contato pelo WhatsApp e receba atendimento rápido.
+</p>
+
+<br>
+
+<a class="btn"
+href="https://wa.me/5519995056652"
+target="_blank">
+Chamar no WhatsApp
+</a>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 GV-GRAFICA Personalizados - Todos os direitos reservados.
+</footer>
+
+<a href="https://wa.me/5519995056652"
+target="_blank"
+class="whatsapp">
+💬
+</a>
+
+<script>
+
+function reveal(){
+let reveals = document.querySelectorAll('.reveal');
+
+for(let i=0;i<reveals.length;i++){
+
+let altura = window.innerHeight;
+let topo = reveals[i].getBoundingClientRect().top;
+
+if(topo < altura - 100){
+reveals[i].classList.add('active');
+}
+
+}
+}
+
+window.addEventListener('scroll', reveal);
+
+</script>
+
+</body>
+</html>
